@@ -1,0 +1,41 @@
+ul.menubar {
+  background: white;
+  list-style: none;
+  padding: 0 10px;
+
+  > li {
+    display: inline-block;
+    position: relative;
+
+    > a {
+      color: black;
+      display: block;
+      padding: 10px 14px;
+      text-decoration: none;
+
+      &:hover { background: #29a7f5; color: white; }
+    }
+
+    > ul {
+      display: none;
+      position: absolute;
+      top: 100%;
+      background: white;
+      padding: 10px 0;
+
+      > li > a {
+        color: black;
+        display: block;
+        padding: 8px 20px;
+        text-decoration: none;
+
+        &:hover { background: #29a7f5; color: white; }
+      }
+    }
+
+    &.is-selected {
+      > a { background: #29a7f5; color: white; }
+      > ul { display: block; }
+    }
+  }
+}
